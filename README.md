@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple Full-Stack CRUD with Next.js 14, PostgreSQL, and Prisma
+This is an implementation of CRUD with Next.js 14. A blog about this can be found here: [Simple Full-Stack CRUD with Next.js 14, PostgreSQL, and Prisma | Fajarwz](https://fajarwz.com/blog/simple-full-stack-crud-with-nextjs-14-postgresql-and-prisma/).
 
-## Getting Started
+## Configuration
 
-First, run the development server:
+### Create .env file from .env.example
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Database Integration
+1. Open .env file
+2. Create a database and connect it with Next.js by adjusting the `DATABASE_URL` with your own configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Migrate the Database Migration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npx prisma db push
+```
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Node Packages 
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Run App
+```
+npm run dev
+```
